@@ -1,16 +1,14 @@
 import React, {useCallback, useState} from 'react';
 import {Text, TextInput, TouchableOpacity, View} from 'react-native';
 import {SafeAreaView} from 'react-native-safe-area-context';
-import {useDispatch, useSelector} from 'react-redux';
+import {useDispatch} from 'react-redux';
 import {signupActions as actions} from '../../redux/modules/signup/slice';
-import {getName} from '../../redux/modules/signup/selector';
 import {styles} from './styles';
 import {COLORS} from '../../utils/styles';
 
 export const Signup = () => {
   const [name, setName] = useState('');
   const dispatch = useDispatch();
-  const getNameSelector = useSelector(getName);
 
   const onPress = useCallback(() => {
     dispatch(actions.setName(name));
@@ -32,9 +30,7 @@ export const Signup = () => {
           style={styles.button}
           activeOpacity={0.75}
           onPress={onPress}>
-          <Text style={styles.textInput}>
-            {getNameSelector !== '' ? getNameSelector : 'ENTER'}
-          </Text>
+          <Text style={styles.textInput}>ENTER</Text>
         </TouchableOpacity>
       </View>
     </SafeAreaView>
