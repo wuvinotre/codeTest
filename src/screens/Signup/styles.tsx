@@ -12,11 +12,12 @@ export const styles = StyleSheet.create({
   },
   box: {
     width: '90%',
-
     justifyContent: 'space-evenly',
     padding: 24,
     backgroundColor: COLORS.backgroundSecondary,
     borderRadius: 16,
+    borderWidth: 1,
+    borderColor: COLORS.secondary,
   },
   header: {
     color: COLORS.text,
