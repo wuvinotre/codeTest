@@ -10,16 +10,8 @@ export const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
   },
-  box: {
-    width: '90%',
-    justifyContent: 'space-evenly',
-    padding: 24,
-    backgroundColor: COLORS.backgroundSecondary,
-    borderRadius: 16,
-    borderWidth: 1,
-    borderColor: COLORS.secondary,
-  },
   title: {
+    paddingBottom: 24,
     color: COLORS.text,
     fontSize: 22,
     fontFamily,
@@ -28,7 +20,7 @@ export const styles = StyleSheet.create({
   text: {
     color: COLORS.text,
     fontSize: 14,
-    paddingTop: 24,
+
     paddingBottom: 8,
     fontFamily,
   },
