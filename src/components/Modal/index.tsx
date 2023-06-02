@@ -1,5 +1,5 @@
 import React, {ReactNode, useState} from 'react';
-import {View, Text, Modal, Pressable} from 'react-native';
+import {View, Text, Modal, TouchableOpacity} from 'react-native';
 import {styles} from './styles';
 
 type Props = {
@@ -20,18 +20,22 @@ export const ModalBox = ({children}: Props) => {
         }}>
         <View style={styles.positionModal}>
           <View style={styles.containerModal}>
-            <Pressable
+            <TouchableOpacity
+              activeOpacity={0.75}
               style={[styles.button, styles.buttonOpen]}
               onPress={() => setModalVisible(!modalVisible)}>
               <Text style={[styles.textButton, styles.textButtonOpen]}>x</Text>
-            </Pressable>
+            </TouchableOpacity>
             {children}
           </View>
         </View>
       </Modal>
-      <Pressable style={styles.button} onPress={() => setModalVisible(true)}>
+      <TouchableOpacity
+        activeOpacity={0.75}
+        style={styles.button}
+        onPress={() => setModalVisible(true)}>
         <Text style={styles.textButton}>+</Text>
-      </Pressable>
+      </TouchableOpacity>
     </View>
   );
 };
