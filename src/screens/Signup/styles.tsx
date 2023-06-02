@@ -19,13 +19,13 @@ export const styles = StyleSheet.create({
     borderWidth: 1,
     borderColor: COLORS.secondary,
   },
-  header: {
+  title: {
     color: COLORS.text,
     fontSize: 22,
     fontFamily,
     fontWeight: 'bold',
   },
-  subHeader: {
+  text: {
     color: COLORS.text,
     fontSize: 14,
     paddingTop: 24,
