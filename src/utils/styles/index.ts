@@ -1,3 +1,5 @@
+export const FONT_FAMILY = 'System';
+
 export const COLORS = {
   background: '#DDDDDD',
   backgroundSecondary: '#FFFFFF',
