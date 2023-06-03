@@ -10,6 +10,7 @@ import {Card} from '../../components/Card';
 import {Header} from '../../components/Header';
 import {Input} from '../../components/Input';
 import {Button} from '../../components/Button';
+import {TextRegular, Title} from '../../components/typography';
 
 import {COLORS} from '../../utils/styles';
 import {styles} from './styles';
@@ -43,10 +44,10 @@ export const Main = () => {
           <ModalBox
             children={
               <View>
-                <Text style={styles.title}>What's on your mind?</Text>
-                <Text style={styles.text}>Title</Text>
+                <Title style={styles.title}>What's on your mind?</Title>
+                <TextRegular style={styles.text}>Title</TextRegular>
                 <Input
-                  placeholder="Hello World"
+                  placeholder="Title here"
                   value={title}
                   onChangeText={setTitle}
                 />
