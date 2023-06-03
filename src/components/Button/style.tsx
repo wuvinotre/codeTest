@@ -1,8 +1,6 @@
 import {StyleSheet} from 'react-native';
 import {COLORS} from '../../utils/styles';
 
-const fontFamily = 'System';
-
 export const styles = StyleSheet.create({
   button: {
     width: '25%',
@@ -15,8 +13,6 @@ export const styles = StyleSheet.create({
   },
   textInput: {
     color: COLORS.textSecondary,
-    fontSize: 14,
-    fontFamily,
     fontWeight: 'bold',
   },
 });
