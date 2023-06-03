@@ -1,12 +1,14 @@
 import React, {useCallback, useState} from 'react';
-import {Text, TextInput, View} from 'react-native';
-import {useDispatch} from 'react-redux';
+import {View} from 'react-native';
 import {useNavigation} from '@react-navigation/native';
-
+import {useDispatch} from 'react-redux';
 import {signupActions as actions} from '../../redux/modules/signup/slice';
-import {COLORS} from '../../utils/styles';
+
 import {Button} from '../../components/Button';
 import {Box} from '../../components/Box';
+import {Input} from '../../components/Input';
+import {Title, TextRegular} from '../../components/typography';
+import {COLORS} from '../../utils/styles';
 import {styles} from './styles';
 
 export const Signup = () => {
@@ -22,12 +24,12 @@ export const Signup = () => {
   return (
     <View style={styles.container}>
       <Box>
-        <Text style={styles.title}>Welcome to CodeLeap network!</Text>
-        <Text style={styles.text}>Please enter your username</Text>
-        <TextInput
-          style={styles.input}
+        <Title style={styles.title}>Welcome to CodeLeap network!</Title>
+        <TextRegular style={styles.text}>
+          Please enter your username
+        </TextRegular>
+        <Input
           placeholder="Ewerton Vinicius Turco"
-          placeholderTextColor={COLORS.secondary}
           value={name}
           onChangeText={setName}
         />
