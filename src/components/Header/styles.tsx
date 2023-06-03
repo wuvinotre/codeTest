@@ -8,7 +8,5 @@ export const styles = StyleSheet.create({
   },
   text: {
     color: COLORS.textSecondary,
-    fontWeight: 'bold',
-    fontSize: 22,
   },
 });
