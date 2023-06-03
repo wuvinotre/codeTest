@@ -45,8 +45,6 @@ export const styles = StyleSheet.create({
   },
   textButton: {
     color: COLORS.textSecondary,
-    fontSize: 22,
-    fontWeight: 'bold',
   },
   textButtonOpen: {
     fontSize: 16,
