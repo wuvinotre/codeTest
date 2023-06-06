@@ -1,4 +1,4 @@
-import React, {useEffect, useLayoutEffect, useState} from 'react';
+import React, {useCallback, useEffect, useLayoutEffect, useState} from 'react';
 import {useDispatch, useSelector} from 'react-redux';
 import {View, Text, ScrollView} from 'react-native';
 import {useNavigation} from '@react-navigation/native';
@@ -22,15 +22,19 @@ export const Main = () => {
   const dispatch = useDispatch();
   const data = useSelector(getData);
 
+  const headerComponent = useCallback(() => {
+    return <Header />;
+  }, []);
+
   useLayoutEffect(() => {
     navigation.setOptions({
-      headerTitle: () => <Header />,
+      headerTitle: headerComponent,
       headerStyle: {
         backgroundColor: COLORS.primary,
       },
       headerTintColor: COLORS.textSecondary,
     });
-  }, [navigation]);
+  }, [navigation, headerComponent]);
 
   useEffect(() => {
     dispatch(fetchData());
