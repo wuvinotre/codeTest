@@ -35,7 +35,7 @@ export const ModalBox = ({children}: Props) => {
       </Modal>
       <TouchableOpacity
         activeOpacity={0.75}
-        style={styles.button}
+        style={[styles.button, styles.buttonClose]}
         onPress={() => setModalVisible(true)}>
         <Title style={styles.textButton}>+</Title>
       </TouchableOpacity>

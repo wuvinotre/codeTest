@@ -32,7 +32,6 @@ export const styles = StyleSheet.create({
     width: 50,
     height: 50,
     borderRadius: 25,
-    justifyContent: 'center',
     alignItems: 'center',
     alignSelf: 'flex-end',
     elevation: 2,
@@ -42,6 +41,9 @@ export const styles = StyleSheet.create({
     width: 25,
     height: 25,
     backgroundColor: COLORS.primary,
+  },
+  buttonClose: {
+    justifyContent: 'center',
   },
   textButton: {
     color: COLORS.textSecondary,
