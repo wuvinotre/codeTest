@@ -1,10 +1,11 @@
 import React, {useCallback, useEffect, useLayoutEffect, useState} from 'react';
 import {useDispatch, useSelector} from 'react-redux';
-import {View, Text, ScrollView} from 'react-native';
+import {View, Text, ScrollView, StatusBar} from 'react-native';
 import {useNavigation} from '@react-navigation/native';
 
 import {fetchData} from '../../redux/modules/main/slice';
 import {getData} from '../../redux/modules/main/selector';
+
 import {ModalBox} from '../../components/Modal';
 import {Card} from '../../components/Card';
 import {Header} from '../../components/Header';
@@ -42,6 +43,7 @@ export const Main = () => {
 
   return (
     <ScrollView>
+      <StatusBar barStyle={'light-content'} />
       <View style={styles.container}>
         <View style={styles.content}>
           <Card data={data} />
